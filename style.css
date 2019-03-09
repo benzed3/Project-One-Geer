@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(245, 250, 247);
+    background-image: url(../Project-One-Geer/background.png);
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: 1480px 900px;
+}
+.navbar{
+    padding: 25px;
+    
+}
+.firstcard{
+    padding: 25px;
+    border-pa
+}
+.navbar-brand{
+    font-size: 34px ;
+
+}
+.nav-link{
+    border-right-style: solid;
+    border-right-width:1px;
+    border-right-color: red;
+    padding: 1px;
+}
