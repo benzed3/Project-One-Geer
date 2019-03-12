@@ -1,6 +1,6 @@
 body{
     background-color: rgb(245, 250, 247);
-    background-image: url(images/columbia.jpg);
+    background: blanchedalmond;
     justify-content: center;
     background-repeat: no-repeat;
     background-size: 1480px 900px;
@@ -37,6 +37,11 @@ body{
     opacity: 0.;
 }
 
+h1 {
+    text-align: center;
+    color: gray;
+    font-style: italic;
+}
 .bg-dark {
     background-color:  rgba(0, 0, 0, 0.76);
 }
@@ -82,7 +87,7 @@ body{
     padding: 1px;
 }
 
-.row{
-
-    justify-content: center;
+footer {
+    background: gray;
+    padding: 50px;
 }
