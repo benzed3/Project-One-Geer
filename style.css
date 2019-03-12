@@ -75,4 +75,27 @@ h1 {
 footer {
     background: gray;
     padding: 50px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+#info {
+    height: 800px;
+}
+
+#about {
+    width: 50%;
+    position: relative;
+    left: 350px;
+}
+
+#text {
+    color: green;
+    font-size: 25px;
+}
+
+img { 
+    position: relative;
+    left: 350px;
 }
