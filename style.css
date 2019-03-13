@@ -24,12 +24,15 @@ body{
     padding-bottom: 25px;
     padding-left: 25px;
     opacity: 0.;
+    border-style: solid;
+    border-color: darkgray;
+    border-width: 5px;
 }
 
 h1 {
     text-align: center;
     color: gray;
-    font-style: italic;
+    font-family: 'Righteous', cursive;
 }
 .bg-dark {
     background-color:  rgba(0, 0, 0, 0.76);
@@ -78,6 +81,9 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    border-style: solid;
+    border-color: darkgray;
+    border-width: 5px;
 }
 
 #info {
@@ -91,11 +97,15 @@ footer {
 }
 
 #text {
-    color: green;
+    color: purple;
     font-size: 25px;
+    font-family: 'Lobster', cursive;
 }
 
-img { 
+#home-image { 
     position: relative;
     left: 350px;
+    border-style: groove;
+    border-width: 10px;
+    border-color: plum;
 }

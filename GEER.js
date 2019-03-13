@@ -4,9 +4,7 @@ function displayInfo() {
 
         event.preventDefault();
 
-        var trial = $(".form-control").val().trim();
-
-        var queryURL = "http://api.eventful.com/docs/events/new?q=" + trial + "&api_key=ZM6QM7Wzsb7rrLZD";
+        var queryURL = "http://api.eventful.com/docs/events/search?...&api_key=ZM6QM7Wzsb7rrLZD&location=Charlotte&date=This+Week&within=15&sort_order=popularity&page_size=6";
 
         $.ajax({
             url: queryURL,
@@ -14,16 +12,12 @@ function displayInfo() {
         })
             .then(function (response) {
 
+                console.log(queryURL);
 
-                var results = response;
-
-                $(".card").append(results);
-
-                console.log(response);
             });
+    });
 
-
-    })
 };
+
 displayInfo();
 
