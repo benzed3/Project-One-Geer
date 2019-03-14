@@ -5,17 +5,6 @@ body{
     background-repeat: no-repeat;
     background-size: 1480px 900px;
 }
-
-.footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(11, 11, 11);
-    color:rgb(11, 11, 11);
-    text-align: center;
-}
-
 .card{
     position: relative;
     display: -ms-flexbox;
@@ -55,13 +44,11 @@ h1 {
     border: 4px solid rgb(66, 222, 233);
     margin: 0;
 }
-
 /* //searchbutton// */
 .btn-outline-success {
     color: #10efa0;
     border-color: #0e77de;
 }
-
 /* homebutton */
 .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
     color: #12efa0;
@@ -72,7 +59,6 @@ h1 {
     padding: 30px;
     justify-content: center;
 }
-
 .navbar{
     padding: 25px;
     opacity: 0.8;
@@ -82,7 +68,6 @@ h1 {
     font-size: 34px ;
 
 }
-
 .nav-link{
     border-right-style: solid;
     border-right-width:1px;
