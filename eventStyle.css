@@ -1,8 +1,11 @@
 body{
+    background-image: url(../Project-One-Geer/images/festival.jpg);
     background-color: rgb(245, 250, 247);
-    background: blanchedalmond;
-    justify-content: center;
     background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background: blanchedalmond; */
+    justify-content: center;
+    background-repeat: fixed, no-repeat;
     background-size: 1480px 900px;
 }
 
@@ -35,15 +38,12 @@ body{
     padding-bottom: 25px;
     padding-left: 25px;
     opacity: 0.;
-    border-style: solid;
-    border-color: darkgray;
-    border-width: 5px;
 }
 
 h1 {
     text-align: center;
     color: gray;
-    font-family: 'Righteous', cursive;
+    font-style: italic;
 }
 .bg-dark {
     background-color:  rgba(0, 0, 0, 0.76);
@@ -93,34 +93,18 @@ h1 {
 footer {
     background: gray;
     padding: 50px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    border-style: solid;
-    border-color: darkgray;
-    border-width: 5px;
 }
 
-#info {
-    height: 800px;
+#root{
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-#about {
-    width: 50%;
-    position: relative;
-    left: 350px;
+.container{
+    display: flex;
+    flex-wrap: wrap;
 }
-
-#text {
-    color: purple;
-    font-size: 25px;
-    font-family: 'Lobster', cursive;
-}
-
-#home-image { 
-    position: relative;
-    left: 350px;
-    border-style: groove;
-    border-width: 10px;
-    border-color: plum;
+.card{
+    margin: 1rem;
+    border: 1px solid gray;
 }
