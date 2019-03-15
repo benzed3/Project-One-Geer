@@ -49,6 +49,7 @@ body{
 }
 
 h1 {
+    font-display: verdana;
     text-align: center;
     color: powderblue;
     font-family: 'Righteous', cursive;
@@ -139,4 +140,36 @@ footer {
     border-style: groove;
     border-width: 10px;
     border-color: plum;
+}
+h2 {
+    text-align:center;
+}
+
+.location{
+    height: 30vh;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    ]
+}
+.temperature{
+    height: 30vh;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.degree-section{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.degree-section span {
+    margin: 10px;
+    font-size: 30px;
+}
+.degree-section h2 {
+    font-size: 40px;
 }
