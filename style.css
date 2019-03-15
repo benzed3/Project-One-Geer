@@ -1,12 +1,25 @@
 body{
-    background-image: url(../Project-One-Geer/images/festival.jpg);
-    background-color: rgb(245, 250, 247);
-    background: blanchedalmond;
-    justify-content: center;
+    background-image: url("../Project-One-Geer/images/festival.jpg");
+    /* background-color: rgb(245, 250, 247); */
+    /* background: blanchedalmond; */
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size: 1480px 900px;
 }
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(11, 11, 11);
+    color:rgb(11, 11, 11);
+    text-align: center;
+}
+/* card info/playlist/ticketprice */
 .card{
+    width: 250px;
+    box-shadow: 5px 5px 7px 5px #000000;
     position: relative;
     display: -ms-flexbox;
     display: flex;
@@ -14,8 +27,13 @@ body{
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: rgba(233, 179, 109, 0.609);
     background-clip: border-box;
+}
+
+/* info-inside-listgroup */
+.list-group-item{
+    background-color:rgba(233, 179, 109, 0.609);
 }
 /* navbar */
 .navbar {
@@ -32,9 +50,17 @@ body{
 
 h1 {
     text-align: center;
-    color: gray;
+    color: powderblue;
     font-family: 'Righteous', cursive;
 }
+/* youtube/TheQueenCity */
+.youtube {
+ float: left;
+ justify-content: flex-start;
+
+}
+/* youtubeVids */
+
 .bg-dark {
     background-color:  rgba(0, 0, 0, 0.76);
 }
@@ -42,24 +68,27 @@ h1 {
 /* Card/Pricetitle */
 .card-body{
     padding: 10px;
-    border: 4px solid rgb(66, 222, 233);
+    /* border: 4px solid rgb(66, 222, 233); */
     margin: 0;
 }
+
 /* //searchbutton// */
 .btn-outline-success {
     color: #10efa0;
     border-color: #0e77de;
 }
+
 /* homebutton */
 .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
     color: #12efa0;
 }
 
-.col-lg-4{
-    border: 1px solid powderblue;
+/* .col-lg-4{
+    border: 1px double powderblue;
     padding: 30px;
     justify-content: center;
-}
+} */
+
 .navbar{
     padding: 25px;
     opacity: 0.8;
@@ -69,6 +98,7 @@ h1 {
     font-size: 34px ;
 
 }
+
 .nav-link{
     border-right-style: solid;
     border-right-width:1px;
@@ -98,14 +128,14 @@ footer {
 }
 
 #text {
-    color: purple;
+    color: gold;
     font-size: 25px;
     font-family: 'Lobster', cursive;
-}
-
-#home-image { 
-    position: relative;
+    position: Center;
     left: 350px;
+    border-radius:41px 50px 50px 50px;
+    -moz-border-radius:41px 50px 50px 50px;
+    -webkit-border-radius:41px 50px 50px 50px;
     border-style: groove;
     border-width: 10px;
     border-color: plum;
