@@ -13,9 +13,9 @@ function displayInfo() {
             var address1 = jsonResponse.events.event[0].venue_address;
             var venueSite1 = jsonResponse.events.event[0].venue_url;
             $("#title1").text(title1);
-            $("#one").text("Date/Time: " + startTime1);
-            $("#two").text("Venue: " + venue1);
-            $("#three").text("Address: " + address1);
+            $("#three").text("Date/Time: " + startTime1);
+            $("#one").text("Venue: " + venue1);
+            $("#two").text("Address: " + address1);
             var a = $("<a>Got to Website</a>");
             a.attr("href", venueSite1);
             $("#a").append(a);
@@ -26,9 +26,9 @@ function displayInfo() {
             var address2 = jsonResponse.events.event[1].venue_address;
             var venueSite2 = jsonResponse.events.event[1].venue_url;
             $("#title2").text(title2);
-            $("#four").text("Date/Time: " + startTime2);
-            $("#five").text("Venue: " + venue2);
-            $("#six").text("Address: " + address2);
+            $("#six").text("Date/Time: " + startTime2);
+            $("#four").text("Venue: " + venue2);
+            $("#five").text("Address: " + address2);
             var b = $("<a>Go to Website</a>");
             b.attr("href", venueSite2);
             $("#b").append(b);
@@ -39,9 +39,9 @@ function displayInfo() {
             var address3 = jsonResponse.events.event[2].venue_address;
             var venueSite3 = jsonResponse.events.event[2].venue_url;
             $("#title3").text(title3);
-            $("#seven").text("Date/Time: " + startTime3);
-            $("#eight").text("Venue: " + venue3);
-            $("#nine").text("Address: " + address3);
+            $("#nine").text("Date/Time: " + startTime3);
+            $("#seven").text("Venue: " + venue3);
+            $("#eight").text("Address: " + address3);
             var c = $("<a>Go to Website</a>");
             c.attr("href", venueSite3);
             $("#c").append(c);
@@ -52,9 +52,9 @@ function displayInfo() {
             var address4 = jsonResponse.events.event[3].venue_address;
             var venueSite4 = jsonResponse.events.event[3].venue_url;
             $("#title4").text(title4);
-            $("#ten").text("Date/Time: " + startTime4);
-            $("#eleven").text("Venue: " + venue4);
-            $("#twelve").text("Address: " + address4);
+            $("#twelve").text("Date/Time: " + startTime4);
+            $("#ten").text("Venue: " + venue4);
+            $("#eleven").text("Address: " + address4);
             var d = $("<a>Go to Website</a>");
             d.attr("href", venueSite4);
             $("#d").append(d);
@@ -65,10 +65,10 @@ function displayInfo() {
             var address5 = jsonResponse.events.event[4].venue_address;
             var venueSite5 = jsonResponse.events.event[4].venue_url;
             $("#title5").text(title5);
-            $("#thirteen").text("Date/Time: " + startTime5);
-            $("#fourteen").text("Venue: " + venue5);
-            $("#fifteen").text("Address: " + address5);
-            var e = $("<a>Website</a>");
+            $("#fifteen").text("Date/Time: " + startTime5);
+            $("#thirteen").text("Venue: " + venue5);
+            $("#fourteen").text("Address: " + address5);
+            var e = $("<a>Go to Website</a>");
             e.attr("href", venueSite5);
             $("#e").append(e);
             //6
@@ -78,9 +78,9 @@ function displayInfo() {
             var address6 = jsonResponse.events.event[5].venue_address;
             var venueSite6 = jsonResponse.events.event[5].venue_url;
             $("#title6").text(title6);
-            $("#sixteen").text("Date/Time: " + startTime6);
-            $("#seventeen").text("Venue: " + venue6);
-            $("#eighteen").text("Address: " + address6);
+            $("#eighteen").text("Date/Time: " + startTime6);
+            $("#sixteen").text("Venue: " + venue6);
+            $("#seventeen").text("Address: " + address6);
             var f = $("<a>Go to Website</a>");
             f.attr("href", venueSite6);
             $("#f").append(f);
@@ -119,7 +119,6 @@ window.addEventListener("load", () => {
                     temperatureDegree.textContent = temperature;
                     temperatureDescription.textContent = summary;
                     locationTimezone.textContent = data.timeZone;
-                    let celsius = (temperature - 32) * (5 / 9);
                 })
         });
     } else {
