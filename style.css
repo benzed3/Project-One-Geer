@@ -49,18 +49,12 @@ body{
 }
 
 h1 {
+    font-size: 140px;
     font-display: verdana;
     text-align: center;
-    color: powderblue;
+    color: rgb(38, 189, 50);
     font-family: 'Righteous', cursive;
 }
-/* youtube/TheQueenCity */
-.youtube {
- float: left;
- justify-content: flex-start;
-
-}
-/* youtubeVids */
 
 .bg-dark {
     background-color:  rgba(0, 0, 0, 0.76);
@@ -123,23 +117,26 @@ footer {
 }
 
 #about {
+    lenght: 90%;
     width: 50%;
     position: relative;
     left: 350px;
 }
 
 #text {
-    color: gold;
-    font-size: 25px;
+    /* background-image: url("../Project-One-Geer/images/loading.gif");  */
+    background-color: rgba(56, 56, 56, 0.589);
+    color: rgb(53, 243, 28);
+    font-size: 35px;
     font-family: 'Lobster', cursive;
-    position: Center;
+    Font-position: Center;
     left: 350px;
-    border-radius:41px 50px 50px 50px;
+    border-radius:81px 50px 150px 150px;
     -moz-border-radius:41px 50px 50px 50px;
     -webkit-border-radius:41px 50px 50px 50px;
     border-style: groove;
-    border-width: 10px;
-    border-color: plum;
+    border-width: 29px;
+    border-color: rgb(106, 78, 144);
 }
 h2 {
     text-align:center;

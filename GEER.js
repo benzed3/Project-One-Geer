@@ -64,10 +64,8 @@ window.addEventListener("load", () => {
                 temperatureDescription.textContent = summary;
 
                 let celsius = (temperature - 32) * (5 / 9);
+                
 
-
-       
-               
                 })
 
             });
