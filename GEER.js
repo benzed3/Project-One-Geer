@@ -34,45 +34,47 @@ window.addEventListener("load", () => {
     let temperatureSection = document.querySelector(".temperature");
     const temperatureSpan = document.querySelector(".temperature span");
 
-    navigator.geolocation.getCurrentPosition = function(success, failure) { 
-        success({ coords: { 
-            latitude: 35.2271, 
-            longitude: 80.8431,
-    
-        }, timestamp: Date.now() }); 
-    } 
+    navigator.geolocation.getCurrentPosition = function (success, failure) {
+        success({
+            coords: {
+                latitude: 35.2271,
+                longitude: 80.8431,
 
-    if(navigator.geolocation) {
+            }, timestamp: Date.now()
+        });
+    }
+
+    if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
             long = position.coords.longitude;
             lat = position.coords.latitude;
-        
+
 
             const proxy = "http://cors-anywhere.herokuapp.com/";
             const api = `${proxy}https://api.darksky.net/forecast/b49da12cb5042bef75af1a465390acf6/37.8267,-122.4233`;
 
-        fetch(api)
-            .then(response => {
-                return response.json();
-            })
-            .then(data => {
-                console.log(data);
-                const {temperature, summary } = data.currently;
-                temperatureDegree.textContent = temperature;
-                temperatureDescription.textContent = summary;
-                locationTimezone.textContent = data.timeZone;
+            fetch(api)
+                .then(response => {
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                    const { temperature, summary } = data.currently;
+                    temperatureDegree.textContent = temperature;
+                    temperatureDescription.textContent = summary;
+                    locationTimezone.textContent = data.timeZone;
 
-                let celsius = (temperature - 32) * (5 / 9);
+                    let celsius = (temperature - 32) * (5 / 9);
 
-               
+
                 })
 
-            });
-        
+        });
 
-       
 
-    }else{
+
+
+    } else {
         h1.textContent = "Please Enable Location"
     }
 });
