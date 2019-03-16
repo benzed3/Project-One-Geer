@@ -1,24 +1,33 @@
 function displayInfo() {
 
-    $("button").on("click", function (event) {
+    var queryURL = "https://cors-anywhere.herokuapp.com/http://api.eventful.com/json/events/search?app_key=ZM6QM7Wzsb7rrLZD&keywords=books&location=Charlotte&date=This+Week&within=15&sort_order=popularity&page_size=6&page_number=1";
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    })
+        .then(function (response) {
 
-        event.preventDefault();
+            var jsonResponse = JSON.parse(response);
 
-        var queryURL = "https://cors-anywhere.herokuapp.com/http://api.eventful.com/json/events/search?app_key=ZM6QM7Wzsb7rrLZD&keywords=books&location=Charlotte&date=This+Week&within=15&sort_order=popularity&page_size=6&page_number=1";
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-        })
-            .then(function (response) {
+            console.log(jsonResponse.events);
 
-                console.log(JSON.parse(response));
+            var title = jsonResponse.events.event[0].title;
+            var startTime = jsonResponse.events.event[0].start_time;
+            var venue = jsonResponse.events.event[0].venue_name;
+            var address = jsonResponse.events.event[0].venue_address;
+            var venueSite = jsonResponse.events.event[0].venue_url;
 
-                var events;
+            $(".card-title").text(title);
+            $(".list-group-item").text("Date/Time: " + startTime);
+            $("#two").text("Venue: " + venue);
+            $("#three").text("Address: " + address);
 
+            var a = $("<a>");
+            a.attr("href", venueSite);
 
+            $(".card-body").append(a);
 
-            });
-    });
+        });
 
 };
 
@@ -32,13 +41,11 @@ window.addEventListener("load", () => {
     let temperatureSection = document.querySelector(".temperature");
     const temperatureSpan = document.querySelector(".temperature span");
 
-    navigator.geolocation.getCurrentPosition = function(success, failure) { 
-        success({ coords: { 
-            latitude: 35.2271, 
-            longitude: 80.8431,
-    
-        }, timestamp: Date.now() }); 
-    } 
+    navigator.geolocation.getCurrentPosition = function (success, failure) {
+        success({
+            coords: {
+                latitude: 35.2271,
+                longitude: 80.8431,
 
 
 
@@ -49,7 +56,7 @@ window.addEventListener("load", () => {
         navigator.geolocation.getCurrentPosition(position => {
             long = position.coords.longitude;
             lat = position.coords.latitude;
-        
+
 
             const proxy = "http://cors-anywhere.herokuapp.com/";
             const api = `${proxy}https://api.darksky.net/forecast/b49da12cb5042bef75af1a465390acf6/37.8267,-122.4233`;
