@@ -5,6 +5,9 @@ body{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 11px;
 }
 
 .footer{
@@ -48,16 +51,15 @@ body{
     border-width: 5px;
 }
 
-h1 {
-    font-size: 140px;
-    font-display: verdana;
+h1  {
     text-align: center;
-    color: rgb(38, 189, 50);
-    font-family: 'Righteous', cursive;
-}
-
-.bg-dark {
-    background-color:  rgba(0, 0, 0, 0.76);
+    color: green;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 50px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 0.75em;
 }
 
 /* Card/Pricetitle */
@@ -141,33 +143,4 @@ footer {
 h2 {
     text-align:center;
     color: white 
-}
-
-.location{
-    height: 30vh;
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    ]
-}
-.temperature{
-    height: 30vh;
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-}
-.degree-section{
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-.degree-section span {
-    margin: 10px;
-    font-size: 30px;
-}
-.degree-section h2 {
-    font-size: 40px;
 }
