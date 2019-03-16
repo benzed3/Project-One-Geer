@@ -1,6 +1,5 @@
 function displayInfo() {
-
-    var queryURL = "https://cors-anywhere.herokuapp.com/http://api.eventful.com/json/events/search?app_key=ZM6QM7Wzsb7rrLZD&keywords=cultural&location=Charlotte&date=This+Week&within=15&sort_order=relevance&page_size=6&page_number=1&mature=safe&category=Festival";
+    var queryURL = "https://immense-savannah-32940.herokuapp.com/http://api.eventful.com/json/events/search?app_key=ZM6QM7Wzsb7rrLZD&keywords=books&location=Charlotte&date=This+Week&within=15&sort_order=popularity&page_size=6&page_number=1&mature=safe&category=Festival";
 
     $.ajax({
         url: queryURL,
@@ -124,7 +123,7 @@ window.addEventListener("load", () => {
         navigator.geolocation.getCurrentPosition(position => {
             long = position.coords.longitude;
             lat = position.coords.latitude;
-            const proxy = "http://cors-anywhere.herokuapp.com/";
+            const proxy = "https://immense-savannah-32940.herokuapp.com/";
             const api = `${proxy}https://api.darksky.net/forecast/b49da12cb5042bef75af1a465390acf6/37.8267,-122.4233`;
             fetch(api)
                 .then(response => {
@@ -135,7 +134,6 @@ window.addEventListener("load", () => {
                     const { temperature, summary } = data.currently;
                     temperatureDegree.textContent = temperature;
                     temperatureDescription.textContent = summary;
-                    locationTimezone.textContent = data.timeZone;
                 })
         });
     } else {
