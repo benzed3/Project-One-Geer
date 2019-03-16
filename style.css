@@ -1,11 +1,25 @@
 body{
-    background-color: rgb(245, 250, 247);
-    background: blanchedalmond;
-    justify-content: center;
+    background-image: url("../Project-One-Geer/images/festival.jpg");
+    /* background-color: rgb(245, 250, 247); */
+    /* background: blanchedalmond; */
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size: 1480px 900px;
 }
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(11, 11, 11);
+    color:rgb(11, 11, 11);
+    text-align: center;
+}
+/* card info/playlist/ticketprice */
 .card{
+    width: 250px;
+    box-shadow: 5px 5px 7px 5px #000000;
     position: relative;
     display: -ms-flexbox;
     display: flex;
@@ -13,8 +27,13 @@ body{
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: rgba(233, 179, 109, 0.609);
     background-clip: border-box;
+}
+
+/* info-inside-listgroup */
+.list-group-item{
+    background-color:rgba(233, 179, 109, 0.609);
 }
 /* navbar */
 .navbar {
@@ -30,10 +49,13 @@ body{
 }
 
 h1 {
+    font-size: 140px;
+    font-display: verdana;
     text-align: center;
-    color: gray;
+    color: rgb(38, 189, 50);
     font-family: 'Righteous', cursive;
 }
+
 .bg-dark {
     background-color:  rgba(0, 0, 0, 0.76);
 }
@@ -41,24 +63,27 @@ h1 {
 /* Card/Pricetitle */
 .card-body{
     padding: 10px;
-    border: 4px solid rgb(66, 222, 233);
+    /* border: 4px solid rgb(66, 222, 233); */
     margin: 0;
 }
+
 /* //searchbutton// */
 .btn-outline-success {
     color: #10efa0;
     border-color: #0e77de;
 }
+
 /* homebutton */
 .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
     color: #12efa0;
 }
 
-.col-lg-4{
-    border: 1px solid powderblue;
+/* .col-lg-4{
+    border: 1px double powderblue;
     padding: 30px;
     justify-content: center;
-}
+} */
+
 .navbar{
     padding: 25px;
     opacity: 0.8;
@@ -68,6 +93,7 @@ h1 {
     font-size: 34px ;
 
 }
+
 .nav-link{
     border-right-style: solid;
     border-right-width:1px;
@@ -91,56 +117,56 @@ footer {
 }
 
 #about {
+    lenght: 90%;
     width: 50%;
     position: relative;
     left: 350px;
 }
 
 #text {
-    color: purple;
-    font-size: 25px;
+    /* background-image: url("../Project-One-Geer/images/loading.gif");  */
+    background-color: rgba(56, 56, 56, 0.589);
+    color: rgb(53, 243, 28);
+    font-size: 35px;
     font-family: 'Lobster', cursive;
-}
-
-#home-image { 
-    position: relative;
+    Font-position: Center;
     left: 350px;
+    border-radius:81px 50px 150px 150px;
+    -moz-border-radius:41px 50px 50px 50px;
+    -webkit-border-radius:41px 50px 50px 50px;
     border-style: groove;
-    border-width: 10px;
-    border-color: plum;
+    border-width: 29px;
+    border-color: rgb(106, 78, 144);
+}
+h2 {
+    text-align:center;
 }
 
-function displayInfo() {
-
-    var queryURL = "https://cors-anywhere.herokuapp.com/http://api.eventful.com/json/events/search?app_key=ZM6QM7Wzsb7rrLZD&keywords=books&location=Charlotte&date=This+Week&within=15&sort_order=popularity&page_size=6&page_number=1";
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    })
-        .then(function (response) {
-
-            var jsonResponse = JSON.parse(response);
-
-            console.log(jsonResponse.events);
-
-            var title = jsonResponse.events.event[0].title;
-            var startTime = jsonResponse.events.event[0].start_time;
-            var venue = jsonResponse.events.event[0].venue_name;
-            var address = jsonResponse.events.event[0].venue_address;
-            var venueSite = jsonResponse.events.event[0].venue_url;
-
-            $(".card-title").text(title);
-            $(".list-group-item").text("Date/Time: " + startTime);
-            $("#two").text("Venue: " + venue);
-            $("#three").text("Address: " + address);
-
-            var a = $("<a>");
-            a.attr("href", venueSite);
-
-            $(".card-body").append(a);
-
-        });
-
-};
-
-displayInfo();
+.location{
+    height: 30vh;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    ]
+}
+.temperature{
+    height: 30vh;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.degree-section{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.degree-section span {
+    margin: 10px;
+    font-size: 30px;
+}
+.degree-section h2 {
+    font-size: 40px;
+}
