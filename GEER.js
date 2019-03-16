@@ -28,9 +28,7 @@ displayInfo();
 window.addEventListener("load", () => {
     let long;
     let lat;
-    let temperatureDescription = document.querySelector('.temperature-description');
     let temperatureDegree = document.querySelector(".temperature-degree");
-    let locationTimezone = document.querySelector(".location-timezone");
     let temperatureSection = document.querySelector(".temperature");
     const temperatureSpan = document.querySelector(".temperature span");
 
@@ -41,6 +39,11 @@ window.addEventListener("load", () => {
     
         }, timestamp: Date.now() }); 
     } 
+
+
+
+
+
 
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
@@ -56,24 +59,19 @@ window.addEventListener("load", () => {
                 return response.json();
             })
             .then(data => {
-                console.log(data);
                 const {temperature, summary } = data.currently;
                 temperatureDegree.textContent = temperature;
                 temperatureDescription.textContent = summary;
-                locationTimezone.textContent = data.timeZone;
 
                 let celsius = (temperature - 32) * (5 / 9);
 
+
+       
                
                 })
 
             });
-        
 
-       
-
-    }else{
-        h1.textContent = "Please Enable Location"
     }
 });
 
